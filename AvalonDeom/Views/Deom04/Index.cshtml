@@ -1,0 +1,84 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>ms-controller</title>
+    <script src="~/Scripts/avalon/avalon.js"></script>
+    <script src="~/Scripts/demo04/scope.js"></script>
+</head>
+<body>
+    <div ms-controller="AAA">
+        <div>{{name}}:{{color}}</div>
+        <div ms-controller="BBB">
+            <div>{{name}}:{{color}}</div>
+            <div ms-controller="CCC">
+                <div>{{name}}:{{color}}</div>
+                <div ms-important="DDD">
+                    <div>{{name|html}}:{{color}}</div>
+                    <div ms-skip="EEE">
+                        <div>{{name}}:{{color}}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div ms-text="conttent"></div>
+        <div ms-html="conttent"></div>
+        过时
+        <input ms-value="_{{conttent+'zz'}}_" />
+        <br />
+        <input ms-attr-value="_{{conttent+'zz'}}_" />
+
+
+        <div>{{conttent|html}}</div>
+        <div>{{word1|uppercase}}</div>
+        <div>{{word2|lowercase}}</div>
+        <div>{{string|truncate(11,"..")}}</div>
+        <div>{{variavle|camelize}}</div>
+        <div>{{string2|escape}}</div>
+        <div>{{money|currency('$',2)}}</div>
+        <div>{{money}}</div>
+        <div>{{num|number(3)}}</div>
+        <div>{{num|number(2,'.')}}</div>
+        <div>{{num|number(2,'.',',')}}</div>
+        <div>{{new Date| date("yyyy MM dd HH:mm:ss a") }}</div>
+        <div>{{"2011/07/08"| date("yyyy MM dd HH:mm:ss ") }}</div>
+        <div>{{"2011-07-08"| date("yyyy MM dd HH:mm:ss a") }}</div>
+        <div>{{"2011-07-08"| date("EEEE MMM dd yyyy") }}</div>
+        <div>{{"08-07-2011"| date("yy/MM/dd") }}</div>
+        <div>{{"08 07,2011"| date("yy/MM/dd") }}</div>
+        <div>{{1373021259229| date("yyyy MM dd HH:mm:ss a") }}</div>
+        <div>{{1373021259229| date("yyyy MM dd H:m:s ") }}</div>
+        <div>{{"&lt;b&gt;1231231231&lt;/b&gt;aaaaaaaaaa"| html|uppercase}}</div>
+        <div>{{"USD"| myfilters}}</div>
+
+        <input type="radio" ms-duplex="isshow" />
+        <div ms-if="isshow">
+            123123
+        </div>
+         <div ms-if="isshow">
+            111111
+        </div>
+          <input   ms-duplex-mylimit="name" data-duplex-limit="8" />
+
+    </div>
+     <select multiple   >
+            <option>123</option>
+            <option>123</option>
+            <option>123</option>
+
+            <option>123</option>
+            <option>123</option>
+            <option>123</option>
+            <option>123</option>
+            <option>123</option>
+            <option>123</option>
+
+        </select>
+</body>
+</html>

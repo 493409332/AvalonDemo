@@ -1,0 +1,1 @@
+require(['avalon','mmRouter','oniui/dialog/avalon.dialog'], function(avalon,mmState,list,detail) {})

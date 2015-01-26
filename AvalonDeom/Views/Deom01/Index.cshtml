@@ -1,0 +1,43 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = null;
+}
+
+
+@*<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>todo list</title>
+
+</head>
+<body>*@
+
+
+@*    <div  ms-controller="todos">
+        <h2>todo list</h2>
+       <form ms-on-submit="add">
+           <div>
+               <label>将下面输入的文字放入todo list 中！</label>
+               <input type="text" ms-duplex="txt" autocomplete="off" />
+               
+           </div>
+       </form>
+        <p ms-if="todolist.size()>0">现有{{todolist.size()}}项todo list</p>
+        <ol>
+            <li ms-repeat="todolist">
+                {{el}}
+                <a href="javascript:void(0);" ms-click="$remove">X</a>
+            </li>
+        </ol>
+    </div>*@
+    
+    <div  ms-controller="aaa">
+       {{username}} <input ms-duplex="username" />
+    </div>
+
+ 
+@*  
+</body>
+</html>*@
